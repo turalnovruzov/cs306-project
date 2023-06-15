@@ -1,7 +1,5 @@
 Entity,Code
 Afghanistan,AFG
-Africa,
-Africa (UN),
 Akrotiri and Dhekelia,OWID_AKD
 Albania,ALB
 Algeria,DZA
@@ -13,8 +11,6 @@ Antigua and Barbuda,ATG
 Argentina,ARG
 Armenia,ARM
 Aruba,ABW
-Asia,
-Asia (UN),
 Australia,AUS
 Austria,AUT
 Azerbaijan,AZE
@@ -75,9 +71,6 @@ Estonia,EST
 Eswatini,SWZ
 Ethiopia,ETH
 Ethiopia (former),OWID_ERE
-Europe,
-Europe (UN),
-European Union (27),
 Falkland Islands,FLK
 Faroe Islands,FRO
 Fiji,FJI
@@ -102,7 +95,6 @@ Guinea,GIN
 Guinea-Bissau,GNB
 Guyana,GUY
 Haiti,HTI
-High-income countries,
 Honduras,HND
 Hong Kong,HKG
 Hungary,HUN
@@ -126,7 +118,6 @@ Kosovo,OWID_KOS
 Kuwait,KWT
 Kyrgyzstan,KGZ
 Laos,LAO
-Latin America and the Caribbean (UN),
 Latvia,LVA
 Lebanon,LBN
 Lesotho,LSO
@@ -134,8 +125,6 @@ Liberia,LBR
 Libya,LBY
 Liechtenstein,LIE
 Lithuania,LTU
-Low-income countries,
-Lower-middle-income countries,
 Luxembourg,LUX
 Macao,MAC
 Madagascar,MDG
@@ -170,14 +159,10 @@ Nicaragua,NIC
 Niger,NER
 Nigeria,NGA
 Niue,NIU
-North America,
 North Korea,PRK
 North Macedonia,MKD
-Northern America (UN),
 Northern Mariana Islands,MNP
 Norway,NOR
-Oceania,
-Oceania (UN),
 Oman,OMN
 Pakistan,PAK
 Palau,PLW
@@ -218,7 +203,6 @@ Slovenia,SVN
 Solomon Islands,SLB
 Somalia,SOM
 South Africa,ZAF
-South America,
 South Korea,KOR
 South Sudan,SSD
 Spain,ESP
@@ -249,7 +233,6 @@ United Arab Emirates,ARE
 United Kingdom,GBR
 United States,USA
 United States Virgin Islands,VIR
-Upper-middle-income countries,
 Uruguay,URY
 Uzbekistan,UZB
 Vanuatu,VUT
