@@ -1,0 +1,192 @@
+[1, 20:08:47] CREATE TABLE `cs306_project`.`country` (
+    `iso` CHAR(8) NOT NULL,
+    `name` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`iso`)): Running...
+[1, 20:08:47] CREATE TABLE `cs306_project`.`country` (
+    `iso` CHAR(8) NOT NULL,
+    `name` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`iso`)): 0 row(s) affected
+[2, 20:08:47] CREATE TABLE `cs306_project`.`population` (
+	`year` INT NOT NULL,
+	`population` INT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[2, 20:08:48] CREATE TABLE `cs306_project`.`population` (
+	`year` INT NOT NULL,
+	`population` INT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[3, 20:08:48] CREATE TABLE `cs306_project`.`inequality_in_life` (
+	`year` INT NOT NULL,
+	`inequality` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[3, 20:08:48] CREATE TABLE `cs306_project`.`inequality_in_life` (
+	`year` INT NOT NULL,
+	`inequality` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[4, 20:08:48] CREATE TABLE `cs306_project`.`health_expenditure` (
+	`year` INT NOT NULL,
+	`expenditure` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[4, 20:08:48] CREATE TABLE `cs306_project`.`health_expenditure` (
+	`year` INT NOT NULL,
+	`expenditure` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[5, 20:08:48] CREATE TABLE `cs306_project`.`life_expectancy_all` (
+	`year` INT NOT NULL,
+	`le` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[5, 20:08:48] CREATE TABLE `cs306_project`.`life_expectancy_all` (
+	`year` INT NOT NULL,
+	`le` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[6, 20:08:48] CREATE TABLE `cs306_project`.`life_expectancy_gender` (
+	`year` INT NOT NULL,
+	`le_male` FLOAT NOT NULL,
+	`le_female` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[6, 20:08:48] CREATE TABLE `cs306_project`.`life_expectancy_gender` (
+	`year` INT NOT NULL,
+	`le_male` FLOAT NOT NULL,
+	`le_female` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[7, 20:08:48] CREATE TABLE `cs306_project`.`survival_to_65` (
+	`year` INT NOT NULL,
+	`survival_male` FLOAT NOT NULL,
+	`survival_female` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): Running...
+[7, 20:08:48] CREATE TABLE `cs306_project`.`survival_to_65` (
+	`year` INT NOT NULL,
+	`survival_male` FLOAT NOT NULL,
+	`survival_female` FLOAT NOT NULL,
+	`iso` CHAR(8) NOT NULL,
+	PRIMARY KEY (`year`, `iso`),
+	FOREIGN KEY (`iso`)
+	REFERENCES `cs306_project`.`country` (`iso`)
+	ON DELETE CASCADE): 0 row(s) affected
+[8, 20:09:02] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[8, 20:09:02] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[9, 20:09:02] SHOW DATABASES: Executing 
+[9, 20:09:02] SHOW DATABASES: OK
+[10, 20:09:03] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[10, 20:09:03] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[11, 20:09:03] SHOW COLUMNS FROM `cs306_project`.`country`: Executing 
+[11, 20:09:03] SHOW COLUMNS FROM `cs306_project`.`country`: OK
+[12, 20:09:07] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`country` (`name`,`iso`) VALUES(?,?)': Executing 
+[12, 20:09:07] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`country` (`name`,`iso`) VALUES(?,?)': OK
+[13, 20:09:07] DEALLOCATE PREPARE stmt: Executing 
+[13, 20:09:07] DEALLOCATE PREPARE stmt: OK
+[14, 20:09:18] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[14, 20:09:18] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[15, 20:09:18] SHOW DATABASES: Executing 
+[15, 20:09:18] SHOW DATABASES: OK
+[16, 20:09:19] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[16, 20:09:19] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[17, 20:09:19] SHOW COLUMNS FROM `cs306_project`.`population`: Executing 
+[17, 20:09:19] SHOW COLUMNS FROM `cs306_project`.`population`: OK
+[18, 20:09:28] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`population` (`iso`,`year`,`population`) VALUES(?,?,?)': Executing 
+[18, 20:09:28] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`population` (`iso`,`year`,`population`) VALUES(?,?,?)': OK
+[19, 20:19:44] DEALLOCATE PREPARE stmt: Executing 
+[19, 20:19:44] DEALLOCATE PREPARE stmt: OK
+[20, 20:20:22] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[20, 20:20:22] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[21, 20:20:22] SHOW DATABASES: Executing 
+[21, 20:20:22] SHOW DATABASES: OK
+[22, 20:20:24] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[22, 20:20:24] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[23, 20:20:24] SHOW COLUMNS FROM `cs306_project`.`life_expectancy_gender`: Executing 
+[23, 20:20:24] SHOW COLUMNS FROM `cs306_project`.`life_expectancy_gender`: OK
+[24, 20:20:35] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`life_expectancy_gender` (`iso`,`year`,`le_female`,`le_male`) VALUES(?,?,?,?)': Executing 
+[24, 20:20:35] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`life_expectancy_gender` (`iso`,`year`,`le_female`,`le_male`) VALUES(?,?,?,?)': OK
+[25, 20:22:51] DEALLOCATE PREPARE stmt: Executing 
+[25, 20:22:51] DEALLOCATE PREPARE stmt: OK
+[26, 20:23:22] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[26, 20:23:22] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[27, 20:23:22] SHOW DATABASES: Executing 
+[27, 20:23:22] SHOW DATABASES: OK
+[28, 20:23:23] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[28, 20:23:23] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[29, 20:23:23] SHOW COLUMNS FROM `cs306_project`.`life_expectancy_all`: Executing 
+[29, 20:23:23] SHOW COLUMNS FROM `cs306_project`.`life_expectancy_all`: OK
+[30, 20:23:33] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`life_expectancy_all` (`iso`,`year`,`le`) VALUES(?,?,?)': Executing 
+[30, 20:23:33] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`life_expectancy_all` (`iso`,`year`,`le`) VALUES(?,?,?)': OK
+[31, 20:26:05] DEALLOCATE PREPARE stmt: Executing 
+[31, 20:26:05] DEALLOCATE PREPARE stmt: OK
+[32, 20:26:26] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[32, 20:26:26] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[33, 20:26:26] SHOW DATABASES: Executing 
+[33, 20:26:26] SHOW DATABASES: OK
+[34, 20:26:27] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[34, 20:26:27] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[35, 20:26:27] SHOW COLUMNS FROM `cs306_project`.`inequality_in_life`: Executing 
+[35, 20:26:27] SHOW COLUMNS FROM `cs306_project`.`inequality_in_life`: OK
+[36, 20:26:37] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`inequality_in_life` (`iso`,`year`,`inequality`) VALUES(?,?,?)': Executing 
+[36, 20:26:37] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`inequality_in_life` (`iso`,`year`,`inequality`) VALUES(?,?,?)': OK
+[37, 20:26:50] DEALLOCATE PREPARE stmt: Executing 
+[37, 20:26:50] DEALLOCATE PREPARE stmt: OK
+[38, 20:27:11] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[38, 20:27:11] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[39, 20:27:11] SHOW DATABASES: Executing 
+[39, 20:27:11] SHOW DATABASES: OK
+[40, 20:27:12] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[40, 20:27:12] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[41, 20:27:12] SHOW COLUMNS FROM `cs306_project`.`health_expenditure`: Executing 
+[41, 20:27:12] SHOW COLUMNS FROM `cs306_project`.`health_expenditure`: OK
+[42, 20:27:21] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`health_expenditure` (`iso`,`year`,`expenditure`) VALUES(?,?,?)': Executing 
+[42, 20:27:21] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`health_expenditure` (`iso`,`year`,`expenditure`) VALUES(?,?,?)': OK
+[43, 20:27:34] DEALLOCATE PREPARE stmt: Executing 
+[43, 20:27:34] DEALLOCATE PREPARE stmt: OK
+[44, 20:27:48] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[44, 20:27:48] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[45, 20:27:48] SHOW DATABASES: Executing 
+[45, 20:27:48] SHOW DATABASES: OK
+[46, 20:27:50] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': Executing 
+[46, 20:27:50] SHOW SESSION VARIABLES LIKE 'lower_case_table_names': OK
+[47, 20:27:50] SHOW COLUMNS FROM `cs306_project`.`survival_to_65`: Executing 
+[47, 20:27:50] SHOW COLUMNS FROM `cs306_project`.`survival_to_65`: OK
+[48, 20:28:06] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`survival_to_65` (`iso`,`year`,`survival_female`,`survival_male`) VALUES(?,?,?,?)': Executing 
+[48, 20:28:06] PREPARE stmt FROM 'INSERT INTO `cs306_project`.`survival_to_65` (`iso`,`year`,`survival_female`,`survival_male`) VALUES(?,?,?,?)': OK
+[49, 20:29:41] DEALLOCATE PREPARE stmt: Executing 
+[49, 20:29:41] DEALLOCATE PREPARE stmt: OK
