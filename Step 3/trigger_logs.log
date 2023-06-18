@@ -1,0 +1,77 @@
+[1, 01:13:32] ALTER TABLE cs306_project.inequality_in_life
+ADD CONSTRAINT check_inequality
+CHECK (inequality >= 0 AND inequality <= 100): Running...
+[1, 01:13:32] ALTER TABLE cs306_project.inequality_in_life
+ADD CONSTRAINT check_inequality
+CHECK (inequality >= 0 AND inequality <= 100): 1882 row(s) affected
+Records: 1882  Duplicates: 0  Warnings: 0
+[2, 01:13:36] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2009, -0.5): Running...
+[2, 01:13:36] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2009, -0.5): Error Code: 3819. Check constraint 'check_inequality' is violated.
+[3, 01:13:38] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2020, 100.5): Running...
+[3, 01:13:38] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2020, 100.5): Error Code: 3819. Check constraint 'check_inequality' is violated.
+[4, 01:15:38] CREATE TRIGGER inequality_in_life_before_insert 
+BEFORE INSERT ON cs306_project.inequality_in_life 
+FOR EACH ROW
+BEGIN
+    IF NEW.inequality < 0 THEN
+        SET NEW.inequality = 0;
+    ELSEIF NEW.inequality > 100 THEN
+        SET NEW.inequality = 100;
+    END IF;
+END: Running...
+[4, 01:15:38] CREATE TRIGGER inequality_in_life_before_insert 
+BEFORE INSERT ON cs306_project.inequality_in_life 
+FOR EACH ROW
+BEGIN
+    IF NEW.inequality < 0 THEN
+        SET NEW.inequality = 0;
+    ELSEIF NEW.inequality > 100 THEN
+        SET NEW.inequality = 100;
+    END IF;
+END: 0 row(s) affected
+[5, 01:15:38] CREATE TRIGGER inequality_in_life_before_UPDATE 
+BEFORE UPDATE ON cs306_project.inequality_in_life 
+FOR EACH ROW
+BEGIN
+    IF NEW.inequality < 0 THEN
+        SET NEW.inequality = 0;
+    ELSEIF NEW.inequality > 100 THEN
+        SET NEW.inequality = 100;
+    END IF;
+END: Running...
+[5, 01:15:38] CREATE TRIGGER inequality_in_life_before_UPDATE 
+BEFORE UPDATE ON cs306_project.inequality_in_life 
+FOR EACH ROW
+BEGIN
+    IF NEW.inequality < 0 THEN
+        SET NEW.inequality = 0;
+    ELSEIF NEW.inequality > 100 THEN
+        SET NEW.inequality = 100;
+    END IF;
+END: 0 row(s) affected
+[6, 01:15:42] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2009, -0.5): Running...
+[6, 01:15:42] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2009, -0.5): 1 row(s) affected
+[7, 01:15:45] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2020, 100.5): Running...
+[7, 01:15:45] INSERT cs306_project.inequality_in_life (iso, year, inequality)
+VALUES ('AFG', 2020, 100.5): 1 row(s) affected
+[8, 01:18:33] UPDATE inequality_in_life
+SET inequality = 200
+WHERE year = 2009: Running...
+[8, 01:18:33] UPDATE inequality_in_life
+SET inequality = 200
+WHERE year = 2009: 1 row(s) affected
+Rows matched: 1  Changed: 1  Warnings: 0
+[9, 01:18:48] UPDATE inequality_in_life
+SET inequality = -100
+WHERE year = 2020: Running...
+[9, 01:18:48] UPDATE inequality_in_life
+SET inequality = -100
+WHERE year = 2020: 1 row(s) affected
+Rows matched: 1  Changed: 1  Warnings: 0

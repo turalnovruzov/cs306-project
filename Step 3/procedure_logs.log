@@ -1,0 +1,18 @@
+[1, 01:41:59] CREATE PROCEDURE `get_min_max_population` (IN iso_ CHAR(8))
+BEGIN
+	SELECT MIN(population) AS min_population, MAX(population) AS max_population
+    FROM population
+    WHERE iso = iso_;
+END: Running...
+[1, 01:41:59] CREATE PROCEDURE `get_min_max_population` (IN iso_ CHAR(8))
+BEGIN
+	SELECT MIN(population) AS min_population, MAX(population) AS max_population
+    FROM population
+    WHERE iso = iso_;
+END: 0 row(s) affected
+[2, 01:42:02] CALL get_min_max_population('AZE'): Running...
+[2, 01:42:02] CALL get_min_max_population('AZE'): Fetching...
+[2, 01:42:02] CALL get_min_max_population('AZE'): 1 row(s) returned
+[3, 01:42:05] CALL get_min_max_population('USA'): Running...
+[3, 01:42:05] CALL get_min_max_population('USA'): Fetching...
+[3, 01:42:05] CALL get_min_max_population('USA'): 1 row(s) returned
